@@ -17,7 +17,7 @@ const Navigation: React.FC = () => {
     { label: 'About', href: '/about' },
     { label: 'Products', href: '/products' },
     { label: 'Services', href: '/services' },
-    { label: 'LMS Detail', href: '/products/lms-pro' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   const primaryColorClass = isTealTheme ? 'text-[#12edb6]' : 'text-[#07503d]';
@@ -51,9 +51,9 @@ const Navigation: React.FC = () => {
               </Link>
             ))}
           </nav>
-          <button className={`flex min-w-[120px] cursor-pointer items-center justify-center rounded-xl h-10 px-4 text-sm font-bold hover:opacity-90 transition-all ${buttonBgClass}`}>
+          <Link href="/contact" className={`flex min-w-[120px] cursor-pointer items-center justify-center rounded-xl h-10 px-4 text-sm font-bold hover:opacity-90 transition-all ${buttonBgClass}`}>
             Contact Us
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -78,9 +78,9 @@ const Navigation: React.FC = () => {
               {link.label}
             </Link>
           ))}
-          <button className={`w-full py-3 rounded-xl font-bold mt-2 ${buttonBgClass}`}>
+          <Link href="/contact" className={`w-full py-3 rounded-xl font-bold mt-2 ${buttonBgClass} flex items-center justify-center`}>
             Contact Us
-          </button>
+          </Link>
         </div>
       )}
     </header>
